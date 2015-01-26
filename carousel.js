@@ -32,7 +32,6 @@ $.Carousel.prototype.slide = function (dir, dirClass) {
   this.$active.addClass(dirClass).addClass('active');
 
   setTimeout((function() {
-    console.log(this.$active);
     this.$active.removeClass(dirClass);
   }).bind(this), 50);
 
