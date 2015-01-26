@@ -275,7 +275,7 @@ div.projects {
 
 .active:hover p {
   background: rgba(0, 0, 0, 0.8);
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% - 20px));
 }
 
 .about-me {
