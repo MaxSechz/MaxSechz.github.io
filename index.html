@@ -1,1 +1,116 @@
-Hello World
+<html>
+  <head>
+    <title>Max Sechzer</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
+    <script src="./jquery-1.11.1.js"></script>
+    <script src="./carousel.js"></script>
+    <link href="./carousel.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <input id="about-me" type="radio" name="max" value="" checked>
+    <label class="about-me" for="about-me">
+      <h1>Max Sechzer</h1>
+      <p class="blurb">
+        I am a web developer based in New York.
+
+        I don't like it when things are described as impossible.
+
+        Programming is my way of taking things from the impossible pile, and putting them in the awesome pile.
+
+        You can see my skills below, but if you want to see what I am capable of, what I can make possible, check out my portfolio.
+      </p>
+      <div class="picture-frame">
+        <img class="headshot" src="./headshot.png" alt="" />
+      </div>
+    </label>
+    <input id="skills" for="skills" type="radio" name="max" value="">
+    <label class="skills" for="skills">
+      <h1>Skills</h1>
+      <div class="badges group">
+        <img src="./badges/ruby.png" alt="" />
+        <img src="./badges/javascript.png" alt="" />
+        <img src="./badges/rails.png" alt="" />
+        <img src="./badges/backbone.png" alt="" />
+        <img src="./badges/node.png" alt="" />
+        <img src="./badges/jQuery.png" alt="" />
+        <img src="./badges/postgresql.png" alt="" />
+        <img src="./badges/git.png" alt="" />
+        <img src="./badges/css.png" alt="" />
+        <img src="./badges/html.png" alt="" />
+      </div>
+    </label>
+    <input id="portfolio" type="radio" name="max" value="">
+    <label class="portfolio" for="portfolio">
+      <h1>Portfolio</h1>
+      <div class="carousel">
+        <a href="javascript:void(0)" class="slide-right"></a>
+        <a href="javascript:void(0)" class="slide-left"></a>
+        <div class="projects">
+          <div class="wrapper">
+            <a href="http://study-blocks.com">
+              <h3 class="title">StudyBlocks</h3>
+              <img class="project studyblocks" src="./screenshots/studyblocks.png" alt="" />
+              <p class="description">
+                StudyBlocks is a collaborative online studying platform that allows anyone to take their flashcards anywhere.
+                Users can create decks of flashcards to study from, using either text or images for the front of the card.
+                They can then take practice tests generated from their cards.
+                StudyBlocks tracks users' scores and displays them on interactive charts, allowing users to see their progress over time.
+                StudyBlocks also offers registration with schools and courses, allowing users access to the decks of their classmates.
+                Together, a class can generate an enormous amount of material, making learning a team effort.
+              </p>
+            </a>
+          </div>
+          <div class="wrapper">
+            <a href="http://maxwell.sechzer.com/blake">
+              <h3 class="title">Blake</h3>
+              <img class="project blake" src="./screenshots/blake.png" alt="" />
+              <p class="description">
+                Blake is a modern, browser based game, written in JavaScript and inspired by the arcade classic, Snake.
+                Players control Blake using the arrow keys, and attempt to eat as many oranges as possible without running Blake into himself.
+                The development of Blake was a challenge in using only jQuery to create a highly dynamic, interactive experience.
+                Creating a functional game was a relatively simple task, however the real challenge was creating the appearance of movement and smooth animation.
+                Clever, dynamic manipulation of HTML elements with different CSS classes, all facilitated by jQuery, resulted in a pleasing and fun tribute to the first video game I ever played.
+              </p>
+            </a>
+          </div>
+          <div class="wrapper">
+            <a href="http://github.com/MaxSechz/chess">
+              <h3 class="title">Chess</h3>
+              <img class="project chess" src="./screenshots/chess.png" alt="" />
+              <p class="description">
+                This is a terminal based chess game written in ruby.
+                It supports two human players, a human versus a computer, and even computer versus computer games.
+                All standard legal moves are possible, including castling, pawn promotion, and en passant.
+                Moves are entered using algebraic chess notation.
+                Incorrect movement will inform the player whether the space selected was empty, contained an enemy piece, or was a friendly piece that could not move.
+                Wins, losses, as well as stalemates result in game termination.
+                Additionally, games can be saved and loaded, allowing players to preserve developed game states and play them again.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </label>
+    <input id="contact" type="radio" name="max" value="">
+    <label class="contact" for="contact">
+      <h1>Contact</h1>
+      <div class="links">
+        <label for="email">Email: <a id="email" href="mailto:maxwell@sechzer.com">maxwell@sechzer.com</a>
+        </label>
+
+        <label for="email">LinkedIn: <a id="email" href="http://www.linkedin.com/maxwellsechzer">linkedin.com/maxwellsechzer</a>
+        </label>
+
+        <label for="email">GitHub: <a id="email" href="http://www.github.com/MaxSechz">github.com/MaxSechz</a>
+        </label>
+      </div>
+    </label>
+    <script>
+    $( document ).ready( function (){
+      $(function() {
+        $('.carousel').carousel();
+      });
+    });
+    </script>
+  </body>
+</html>
