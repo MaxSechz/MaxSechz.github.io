@@ -51,6 +51,7 @@ input {
   color: white;
   border-radius: 5px;
   -webkit-transition: height 1s;
+  overflow: hidden;
 }
 
 input:checked + label {
@@ -69,7 +70,8 @@ input:checked + label * {
 }
 
 .blurb {
-  margin-top: 300px;
+  position: relative;
+  top: 45%;
   text-align: center;
   white-space: pre;
   font-size: 24px;
@@ -86,6 +88,7 @@ input:checked + label * {
   position: absolute;
   top: 80px;
   left: 50%;
+  height: 45%;
   transform: translateX(-50%);
   width: 200px;
   border-radius: 20px;
@@ -124,16 +127,16 @@ input:checked + label .links {
 
 label .badges {
   position: relative;
-  top: 80px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   height: 0;
-  width: 1700px;
+  width: 900px;
   display: block;
 }
 
 input:checked + label .badges {
-    height: 160px;
+    height: 150px;
     margin: 40px 20px;
 }
 
@@ -149,12 +152,11 @@ input:checked + label .badges {
 
 label div.carousel {
   height: 0;
-  width: 1300px;
   overflow: hidden;
 }
 
 input:checked + label div.carousel {
-  height: 583px;
+  height: calc(100% - 10px);
   -webkit-transition: height 1s 1s, opacity 1s 1s;
 }
 
@@ -191,7 +193,7 @@ div.projects {
   font-size: 40px;
   width: 50px;
   height: 100%;
-  background: #6f3535;
+  background: #9f3535;
   -webkit-transition: opacity 1s;
 }
 
@@ -219,7 +221,7 @@ div.projects {
 }
 
 .carousel:hover .slide-left, .carousel:hover .slide-right {
-  background: #5b2b2b;
+  background: #9f4545;
 }
 
 .slide-right {
@@ -227,19 +229,17 @@ div.projects {
 }
 
 .carousel {
-  top: -80px;
+  top: -70px;
   position: relative;
-  width: 1200px;
   margin: 20px auto;
-  border: 5px solid #6f3535;
-  border-radius: 10px;
+  border: 5px solid #9f3535;
   background: white;
 }
 
 .project {
   display: block;
   margin: auto;
-  height: 583px;
+  height: 100%;
 }
 
 .wrapper .title {
@@ -302,7 +302,7 @@ label h1 {
   opacity: 1;
   left: 20px;
   top: 20px;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 input:checked + label h1 {
