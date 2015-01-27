@@ -92,7 +92,7 @@ input:checked + label * {
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 190px;
+  width: 180px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -329,14 +329,14 @@ input:checked + .portfolio h1 {
   left: -50%;
 }
 
-@media (max-height: 750px) {
+@media (max-height: 800px) {
   label h1, .links {
     font-size: 30px;
   }
 
   .picture-frame {
     top: 50px;
-    width: 140px;
+    width: 130px;
   }
 
   .blurb {
