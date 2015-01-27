@@ -97,7 +97,7 @@ input:checked + label * {
 
 .links {
   display: none;
-  font-size: 50px;
+  font-size: 40px;
   position: absolute;
   left: 25%;
   opacity: 0;
@@ -107,6 +107,7 @@ input:checked + label * {
 }
 
 .links label {
+  margin-bottom: 10px;
   width: 100%;
   display: block;
 }
