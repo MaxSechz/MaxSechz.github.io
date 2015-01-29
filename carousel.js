@@ -18,10 +18,10 @@ $.Carousel.prototype.slide = function (dir, dirClass) {
   this.$active.addClass(oppDirection);
 
   var oldActive = this.$active;
-
   this.$active.one('transitionend', (function() {
-    oldActive.removeClass("active");
+    console.log(oldActive);
     oldActive.removeClass(oppDirection);
+    oldActive.removeClass("active");
     this.transitioning = false;
   }).bind(this));
 
@@ -33,7 +33,8 @@ $.Carousel.prototype.slide = function (dir, dirClass) {
 
   setTimeout((function() {
     this.$active.removeClass(dirClass);
-  }).bind(this), 50);
+    console.log(this.$active)
+  }).bind(this), 20);
 
 };
 

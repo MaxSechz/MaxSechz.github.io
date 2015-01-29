@@ -145,12 +145,12 @@ label .badges {
   left: 50%;
   transform: translateX(-50%);
   height: 0;
-  width: 900px;
+  width: 1000px;
   display: block;
 }
 
 input:checked + label .badges {
-    height: 150px;
+    height: 200px;
     margin: 40px 20px;
     -webkit-transition: none;
 }
@@ -185,7 +185,6 @@ div.projects {
 .wrapper {
   display: none;
   position: absolute;
-  float: left;
 }
 
 .active {
@@ -329,7 +328,7 @@ input:checked + .portfolio h1 {
   left: -50%;
 }
 
-@media (max-height: 800px) {
+@media (max-height: 850px) {
   label h1, .links {
     font-size: 30px;
   }
@@ -348,8 +347,8 @@ input:checked + .portfolio h1 {
   }
 
   input:checked + label .badges {
-    height: 100px;
-    width: 600px;
+    height: 150px;
+    width: 800px;
   }
 }
 
@@ -369,6 +368,10 @@ input:checked + .portfolio h1 {
   .blurb {
     font-size: 14px;
   }
+  input:checked + label .badges {
+    height: 100px;
+    width: 550px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -385,10 +388,5 @@ input:checked + .portfolio h1 {
 
   .blurb {
     font-size: 14px;
-  }
-
-  input:checked + label .badges {
-    height: 80px;
-    width: 900px;
   }
 }
