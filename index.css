@@ -75,7 +75,7 @@ input:checked + label * {
   position: relative;
   top: 40%;
   text-align: center;
-  white-space: pre-wrap;
+  white-space: pre;
   font-size: 24px;
 }
 
@@ -353,7 +353,25 @@ input:checked + .portfolio h1 {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-width: 1200px) {
+  .blurb {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .blurb {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blurb {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 650px) {
   .picture-frame {
     top: 40px;
     width: 100px;
