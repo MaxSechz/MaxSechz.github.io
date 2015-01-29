@@ -367,6 +367,12 @@ input:checked + .portfolio h1 {
 
 @media (max-width: 1000px) {
   .blurb {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .blurb {
     font-size: 12px;
   }
 }
