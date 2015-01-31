@@ -51,7 +51,11 @@ input {
   color: white;
   border-radius: 5px;
   -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -ms-transition: height 1s;
+  -o-transition: height 1s;
   overflow: hidden;
+
 }
 
 input:checked + label {
@@ -61,12 +65,18 @@ input:checked + label {
 
 label * {
   opacity: 0;
-  -webkit-transition: opacity 0.5s, left 1s, transform 1s, margin 1s;
+  -webkit-transition: opacity 0.5s, left 1s, -webkit-transform 1s, margin 1s;
+  -moz-transition:  opacity 0.5s, left 1s, transform 1s, margin 1s;
+  -ms-transition: opacity 0.5s, left 1s, transform 1s, margin 1s;
+  -o-transition:  opacity 0.5s, left 1s, transform 1s, margin 1s;
 }
 
 input:checked + label * {
   opacity: 1;
-  -webkit-transition: opacity 0.5s 1s, left 1s, transform 1s, height 1s,  margin 1s;
+  -webkit-transition: opacity 0.5s 1s, left 1s, -webkit-transform 1s, height 1s,  margin 1s;
+  -moz-transition:   opacity 0.5s 1s, left 1s, transform 1s, height 1s,  margin 1s;
+  -ms-transition:  opacity 0.5s 1s, left 1s, transform 1s, height 1s,  margin 1s;
+  -o-transition:   opacity 0.5s 1s, left 1s, transform 1s, height 1s,  margin 1s;
 }
 
 .blurb {
@@ -91,7 +101,10 @@ input:checked + label * {
   position: absolute;
   top: 80px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 180px;
   border-radius: 20px;
   overflow: hidden;
@@ -132,7 +145,10 @@ input:checked + label * {
 input:checked + label .links {
   display: block;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .links a:hover {
@@ -143,7 +159,10 @@ label .badges {
   position: relative;
   top: 30px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 0;
   width: 1000px;
   display: block;
@@ -153,6 +172,9 @@ input:checked + label .badges {
     height: 200px;
     margin: 40px 20px;
     -webkit-transition: none;
+    -moz-transition:   none;
+    -ms-transition:  none;
+    -o-transition:   none;
 }
 
 .badges * {
@@ -173,6 +195,9 @@ label div.carousel {
 input:checked + label div.carousel {
   height: calc(100% - 10px);
   -webkit-transition: height 1s 1s, opacity 1s 1s;
+  -moz-transition: height 1s 1s, opacity 1s 1s;
+  -ms-transition: height 1s 1s, opacity 1s 1s;
+  -o-transition: height 1s 1s, opacity 1s 1s;
 }
 
 div.projects {
@@ -191,6 +216,9 @@ div.projects {
   display: block;
   left: 0%;
   -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -ms-transition: left 0.5s;
+  -o-transition: left 0.5s;
 }
 
 .wrapper.right {
@@ -209,6 +237,9 @@ div.projects {
   height: 100%;
   background: #9f3535;
   -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
 }
 
 .slide-left {
@@ -219,7 +250,10 @@ div.projects {
   content: "<";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: white;
   font-size: 70px;
 }
@@ -229,7 +263,10 @@ div.projects {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: white;
   font-size: 70px;
 }
@@ -266,8 +303,13 @@ div.projects {
   color: white;
   font-size: 40px;
   background: transparent;
-  transform: translateY(-100%);
-  -webkit-transition: background 1s, transform 1s;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: background 1s, -webkit-transform 1s;
+  -moz-transition: background 1s, transform 1s;
+  -ms-transition: background 1s, transform 1s;
+  -o-transition: background 1s, transform 1s;
   z-index: 1;
 }
 
@@ -280,16 +322,25 @@ div.projects {
   color: white;
   font-size: 22px;
   background: transparent;
-  -webkit-transition: background 1s, transform 1s;
+  -webkit-transition: background 1s, -webkit-transform 1s;
+  -moz-transition: background 1s, transform 1s;
+  -ms-transition: background 1s, transform 1s;
+  -o-transition: background 1s, transform 1s;
 }
 
 .active:hover h3 {
   background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
   transform: translateY(0%);
 }
 
 .active:hover p {
   background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(calc(-100% - 20px));
+  -moz-transform:  translateY(calc(-100% - 20px));
+  -ms-transform: translateY(calc(-100% - 20px));
   transform: translateY(calc(-100% - 20px));
 }
 
@@ -321,7 +372,10 @@ label h1 {
 
 input:checked + label h1 {
  left: 50%;
- transform: translateX(-50%);
+ -webkit-transform: translateX(-50%);
+    -moz-transform: tramslateX(-50%);
+     -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
 }
 
 input:checked + .portfolio h1 {
