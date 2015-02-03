@@ -1,4 +1,4 @@
-html, head, body, label, input, h1, div, img, h3 {
+html, head, body, label, input, h1, div, img, h3, ul, li, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -102,7 +102,6 @@ input:checked + label * {
   top: 80px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-     -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 180px;
@@ -146,7 +145,6 @@ input:checked + label .links {
   display: block;
   top: 50%;
   -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -160,7 +158,6 @@ label .badges {
   top: 30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-     -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   height: 0;
@@ -182,9 +179,6 @@ input:checked + label .badges {
   float: left;
 }
 
-.wrapper {
-  width: 100%;
-}
 
 
 label div.carousel {
@@ -208,6 +202,9 @@ div.projects {
 }
 
 .wrapper {
+  padding: 0 51px;
+  width: calc(100% - 100px);
+  height: 100%;
   display: none;
   position: absolute;
 }
@@ -251,7 +248,6 @@ div.projects {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   color: white;
@@ -264,7 +260,6 @@ div.projects {
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   color: white;
@@ -288,60 +283,89 @@ div.projects {
 }
 
 .project {
+  position: relative;
+  float: left;
   display: block;
-  margin: auto;
   height: 100%;
+  width: 50%;
+}
+
+.project img {
+  position: relative;
+  max-height: 100%;
   max-width: 100%;
-  padding:0 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.info {
+  position: relative;
+  color: white;
+  display: block;
+  float: left;
+  width: calc(50% - 40px);
+  height: calc(100% - 40px);
+  padding: 20px;
+  background: black;
 }
 
 .wrapper .title {
-  left: 50px;
-  position: absolute;
-  padding: 10px;
-  width: calc(100% - 119px);
+  text-align: center;
   color: white;
   font-size: 40px;
   background: transparent;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: background 1s, -webkit-transform 1s;
-  -moz-transition: background 1s, transform 1s;
-  -ms-transition: background 1s, transform 1s;
-  -o-transition: background 1s, transform 1s;
   z-index: 1;
 }
 
-.wrapper .description {
-  left: 50px;
-  width: calc(100% - 139px);
-  position: absolute;
-  display: block;
-  padding: 20px;
-  color: white;
-  font-size: 22px;
+.project-links {
   background: transparent;
-  -webkit-transition: background 1s, -webkit-transform 1s;
-  -moz-transition: background 1s, transform 1s;
-  -ms-transition: background 1s, transform 1s;
-  -o-transition: background 1s, transform 1s;
+  color: #58a9ca;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.active:hover h3 {
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%);
+.project-links a {
+  margin-left: 20px;
+  float: left;
+  font-size: 22px;
 }
 
-.active:hover p {
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-transform: translateY(calc(-100% - 20px));
-  -moz-transform:  translateY(calc(-100% - 20px));
-  -ms-transform: translateY(calc(-100% - 20px));
-  transform: translateY(calc(-100% - 20px));
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .description {
+  margin-top: 60px;
+  display: block;
+  color: white;
+  font-size: 24px;
+  background: transparent;
+  border-top: 2px solid #ccc;
+  white-space: pre-line;
+}
+
+@media (max-width: 1600px) and (min-height: 700px) {
+  .info .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 800px), (max-width: 1000px) and (max-height: 900px), (max-height: 700px), (max-width: 800px) {
+  .info .description {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-height: 850px) and (min-width: 1600px) {
+  .info .description {
+    font-size: 18px;
+  }
 }
 
 .about-me {
@@ -373,7 +397,6 @@ label h1 {
 input:checked + label h1 {
  left: 50%;
  -webkit-transform: translateX(-50%);
-    -moz-transform: tramslateX(-50%);
      -ms-transform: translateX(-50%);
          transform: translateX(-50%);
 }
@@ -397,7 +420,7 @@ input:checked + .portfolio h1 {
   }
 
   .carousel {
-    top: -70px;
+    top: -55px;
   }
 
   input:checked + label .badges {
@@ -442,5 +465,10 @@ input:checked + .portfolio h1 {
 
   .blurb {
     font-size: 14px;
+  }
+
+  input:checked + label .badges {
+    height: 100px;
+    width: 550px;
   }
 }
