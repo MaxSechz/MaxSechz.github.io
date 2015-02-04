@@ -109,8 +109,8 @@ $(window).load(function() {
 
 	$('#portfolioSlider').flexslider({
 		animation: "slide",
-		directionNav: false,
-		controlNav: true,
+		directionNav: true,
+		controlNav: false,
 		touch: false,
 		pauseOnHover: true,
 		start: function() {
