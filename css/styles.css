@@ -150,8 +150,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */
 /* * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
 * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
 *    (include `-moz` to future-proof). */
-input[type="search"] { -webkit-appearance: textfield; /* 1 */
-	-moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ /* 2 */
 box-sizing: content-box; }
 /* * Removes inner padding and search cancel button in Safari 5 and Chrome
 * on OS X. */
@@ -170,7 +169,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* ==========================================================================
 Global Styles
 ========================================================================== */
-a { color: #353535; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+a { color: #353535; -webkit-transition: all 0.5s; transition: all 0.5s; }
 a:hover { color: #3dc9b3; text-decoration: none; }
 p { color: #8c9398; word-spacing: 1px; line-height: 25px; font-size: 14px; }
 h2 { font-size: 15px; color: #353535; text-transform: uppercase; font-weight: bold; }
@@ -178,9 +177,9 @@ h2::after { content: " "; border: solid 2px #3dc9b3; display: block; width: 35px
 .section-padding { padding: 90px 0 100px }
 .dark-bg { background: #f3f5f8; }
 .light-bg { background-color: #fff; }
-.dark-box { background: #f3f5f8; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; }
-.light-box { background-color: #fff; -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; -moz-box-shadow: 0px 3px 0px 0px #f0f2f4; box-shadow: 0px 3px 0px 0px #f0f2f4; padding: 20px 0; }
-.light-box:hover, .light-box:focus { -webkit-box-shadow: 0px 3px 0px 0px #3dc9b3; -moz-box-shadow: 0px 3px 0px 0px #3dc9b3; box-shadow: 0px 3px 0px 0px #3dc9b3; }
+.dark-box { background: #f3f5f8; box-shadow: 0px 3px 0px 0px #f0f2f4; }
+.light-box { background-color: #fff; box-shadow: 0px 3px 0px 0px #f0f2f4; padding: 20px 0; }
+.light-box:hover, .light-box:focus { box-shadow: 0px 3px 0px 0px #3dc9b3; }
 .box-hover { transition: all 500ms ease-in-out; -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; }
 .box-hover:hover, .box-hover:focus { transform: translate(0, -15px); -webkit-transform: translate(0, -15px); -ms-transform: translate(0, -15px); }
 .wrapper { height: 650px; }
@@ -211,11 +210,11 @@ nav ul li a:hover, nav ul li a:focus { text-decoration: none; color: rgba(255, 2
 /* ==========================================================================
 Hero
 ========================================================================== */
-.hero { background: url('../img/sea-bird.jpeg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; padding: 65px 0 0 0; height: 100vh; }
+.hero { background: url('../img/sea-bird.jpeg') no-repeat center center; background-size: cover; padding: 65px 0 0 0; height: 100vh; }
 .hero h1 { font-size: 70px; letter-spacing: 12px; margin: 10px;}
 .hero h1 span { color: #a1a9b0; display: inline-block; }
 .hero p { letter-spacing: 1px; }
-.learn-more-btn { background: rgba(61, 201, 179, 1); padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #fff; text-transform: uppercase; letter-spacing: 1px; display: inline-block; -webkit-box-shadow: 0px 3px 0px 0px #309383; -moz-box-shadow: 0px 3px 0px 0px #309383; box-shadow: 0px 3px 0px 0px #309383; margin: 60px 0 0; font-weight: bold; }
+.learn-more-btn { background: rgba(61, 201, 179, 1); padding: 20px 40px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; color: #fff; text-transform: uppercase; letter-spacing: 1px; display: inline-block; box-shadow: 0px 3px 0px 0px #309383; margin: 60px 0 0; font-weight: bold; }
 .learn-more-btn:hover, .learn-more-btn:focus { background: rgba(61, 201, 179, 0.6); color: #fff; }
 /* ==========================================================================
 Intro
@@ -238,7 +237,7 @@ iPhone Section
 /* ==========================================================================
 Swag
 ========================================================================== */
-.swag { position: relative; background: url('../img/pelican.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 50px 0; }
+.swag { position: relative; background: url('../img/pelican.jpg') no-repeat center center; background-size: cover; background-attachment: fixed; padding: 50px 0; }
 .swag .shadow { background: rgba(0, 0, 0, 0.5); position: absolute; width: 100%; height: 100%; padding: 50px 0; top: 0; }
 .swag h1 { color: #fff; font-size: 40px; text-transform: uppercase; letter-spacing: 5px; }
 .swag h1 span { display: block; font-size: 25px; margin-top: 20px; }
@@ -263,18 +262,16 @@ a.close-overlay.hidden { display: none; }
 .overlay-effect .overlay { bottom: 0; left: 0; right: 0; width: 100%; height: 100%; opacity: 0; }
 .overlay-effect .overlay .expand { left: 0; right: 0; bottom: 47%; margin: 0 auto -30px auto; }
 .overlay-effect .img.hover .overlay { height: 100%; opacity: 1; }
-.img img { position: relative; left: 50%;  max-height: 550px;  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -moz-transition: opacity 0.35s, -moz-transform 0.35s; -o-transition: opacity 0.35s, -o-transform 0.35s; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); -ms-transform: translate3d(-50%, 0, 0); }
+.img img { position: relative; left: 50%;  max-height: 550px;  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -o-transition: opacity 0.35s, -o-transform 0.35s; -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); -ms-transform: translate3d(-50%, 0, 0); }
 .img a:hover { color: black; }
 .designs { position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 50px; }
 /* ==========================================================================
 Subscribe
 ========================================================================== */
-.subscribe { background: url('../img/keyboard-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed; padding: 120px 0 140px; }
-.subscribe h1 { color: #fff; margin-bottom: 40px; }
-.subscribe h1 span { display: block; font-size: 15px; text-transform: uppercase; font-weight: bold; margin-top: 20px; letter-spacing: 1px; }
-.subscribe input[type=text] { background-color: rgba(255, 255, 255, 0.1); border: solid 1px #fff; padding: 20px; width: 30%; color: #fff; }
-.subscribe input[type=submit] { background: rgba(61, 201, 179, 0.5); border: solid 1px rgba(61, 201, 179, 0.5); padding: 20px; color: #fff; text-transform: uppercase; letter-spacing: 1px; transition: all 0.5s ease; -moz-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-.subscribe input[type=submit]:hover { background: rgba(61, 201, 179, 1); border: solid 1px rgba(61, 201, 179, 1); color: #fff; }
+.subscribe { background: url('../img/horses.jpeg') no-repeat center center; background-size: cover; background-attachment: fixed; }
+.other-shadow { background: rgba(0, 0, 0, 0.5); padding: 50px 0; }
+.subscribe h1 { color: #fff; font-size: 40px; text-transform: uppercase; letter-spacing: 5px; }
+.subscribe h1 span { display: block; font-size: 25px; margin-top: 20px; }
 /* ==========================================================================
 CTA
 ========================================================================== */
@@ -341,3 +338,6 @@ Waypoints
 .delay-4s { animation-delay: 4s; -webkit-animation-delay: 4s; }
 .delay-4-5s { animation-delay: 4.5s; -webkit-animation-delay: 4.5s; }
 .delay-5s { animation-delay: 5s; -webkit-animation-delay: 5s; }*/
+
+.resume { position: relative; height: 1000px; }
+.resume-frame { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 800px; height: 1000px; border: none; }
